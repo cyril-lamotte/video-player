@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vidéo player</title>
+</head>
+<body>
+
+<figure class="vp">
+	<figcaption>
+		<p>Exemple de vidéo avec audio description en HTML5</p>
+	</figcaption>
+
+	<video controls>
+		<source src="friday.mp4" type="video/mp4">
+		<track kind="captions" src="friday.vtt" srclang="fr" label="Français">
+	</video>
+	<audio src="audio-description.mp3" preload="metadata"></audio>
+
+	<ul class="vp__controls">
+		<li><button type="button" class="vp__playpause"></button></li>
+		<li class="progress">
+			<progress value="0" min="0">
+				<span class="vp__progress-bar"></span>
+			</progress>
+		</li>
+		<li><button type="button" class="vp__mute"></button></li>
+		<li><button type="button" class="vp__subs"></button></li>
+		<li><button type="button" class="vp__audiodesc"></button></li>
+		<li><button type="button" class="vp__fullscreen"></button></li>
+	</ul>
+</figure>
+
+<script src="main.js" type="module"></script>
+
+</body>
+</html>
